@@ -1,31 +1,65 @@
-# Truck Electrification Network — Improvements v1
-**Helios Soft-PASS · 2026-09-19 · merge Tinkabot deltas when they land**
+# Truck Electrification Network — Improvements (Soft-PASS)
+**2026-09-19 · tinkabot for Helios/Chris · sources: CATCHUP-MASTER + GEN1-PAD-SPEC + POWER-POD + ROUTER + WHO-PAYS + FIRST-CHECK + HYBRID-MPG + DFW-DAILY-POWER**  
+**Rule:** Soft-PASS = locked from dumps. Soft-FAIL = labeled guess / open gap. Do not invent pad V/A, SOC%, kit mpg, Tesla PO, signed interconnect MW.
 
-## Engineering
-1. **Bay-62 first article kit** — single cassette + lateral + instrumented trailer. Kill drain/ice/fault-current unknowns before any 201-door saw cut. Highest ROI Soft-PASS.
-2. **Cassette-ID as first-class router object** — Soft-PASS already in ROUTER-SPEC; Soft-FAIL Steve ship status. Finish HUD binding so dispatch never says “door 62” for watts.
-3. **HVIL green/no-green UX** — Gen 1 hitch: one glance state on HUD + pad lamp. Soft-FAIL auto-mate until manual hop is boringly reliable.
-4. **Fault-zone laterals** — Soft-PASS design intent; Soft-FAIL spacing. Spec ampacity/drop/fault zone from measured contact patch, not door count.
-5. **Dual-foot interlock** — Soft-PASS both shoes. Add Soft-PASS telemetry “cocked trailer” event so Yard doesn’t chase a ghost FAULT.
-6. **Regen vs dock path coloring** — Soft-PASS separate. HUD/docs must never draw road regen as pad lightning (operator confusion Soft-PASS risk).
-7. **Wet-wipe contact cycle** — Soft-PASS in pad stack. Add Soft-FAIL→Soft-PASS test matrix: oil, ice, gravel, forklift grind hours.
-8. **Trailer Dynamics / Range Energy compare** — Soft-PASS published e-axle-on-trailer arch skips HV hop. Keep as Soft-PASS competitor board; Soft-FAIL copy.
+## A) Numbered improvements (why / impact)
 
-## Operational
-9. **Dispatch Soft-PASS training card** — one page: van≠set (Estes Samsara lesson) + cassette≠door. Cut three-try phone loops.
-10. **WORN→swap SLA** — Soft-PASS snap-out SKU. Soft-FAIL minutes. Publish Soft-PASS target (e.g. forklift pull + drop) after first article.
-11. **Island mode drill** — Soft-PASS verb exists. Soft-FAIL interconnect. Run Soft-PASS tabletop: cell dies → sat hop → island bank → priority bays only.
-12. **No-telemetry honesty** — Soft-PASS: SOC dash until log. Ban Soft-FAIL fake % in every pitch deck forever.
+1. **Ship Gen-1 as YARD-ONLY (lock city verbs behind interconnect)**  
+   **Why:** City EXPORT/CHARGE/ISLAND needs a signed interconnect; Gen-1 money is dropped-trailer pad charge. Mixing scopes burns time.  
+   **Impact:** Clear ship gate; HUD/router stay honest; Soft-FAIL city mesh stays parked.
 
-## Financial / strategic
-13. **Who-pays Soft-PASS wedge** — public plant + hybrid write-off Soft-PASS frame; Soft-FAIL $. Lead with Soft-PASS first-check film, not appropriation fantasy.
-14. **Insurance Soft-PASS path** — Soft-PASS slip/torque log idea. Soft-FAIL %. Pilot with Soft-PASS telematics partner after Soft-PASS trustworthy schema.
-15. **City mesh Soft-PASS deferral** — Soft-PASS Gen1 = yard-only. Soft-FAIL selling EXPORT as live product. Keeps Soft-PASS credibility.
-16. **Estes Soft-PASS champion path** — Soft-PASS Chris inside Estes. Soft-PASS pad + hybrid as Soft-PASS ops cost cut (idle/fuel) Soft-FAIL vendor bake-off until Soft-PASS bay-62 film.
-17. **Fuel Soft-PASS adjacency** — Soft-PASS Love’s price API Soft-PASS; Soft-FAIL diesel tank APIs. Soft-PASS do **not** block TEN on fuel-inventory Soft-FAIL.
+2. **First article = bay 62, one cassette + one lateral (not 201 doors)**  
+   **Why:** Spec already locks photo band + first article; full-run before prove is burn rate.  
+   **Impact:** Proves weight-switch, both-shoes rule, lamps, snap-out wear — without slabbing the yard.
 
-## Cleanup / productization
-18. **Single brief Soft-PASS** — this TECHNICAL-BRIEF-v1 Soft-PASS replaces rambling voice. HTML Soft-PASS pitch Soft-FAIL until brief Soft-PASS is source of truth.
-19. **Delete dead Soft-PASS paths** — Soft-PASS: no radios, no 911, no Tesla logos, no second cassette SKU Soft-PASS. Soft-PASS Algorithm: best part is no part.
-20. **Multi-mirror Soft-PASS always-on** — Soft-PASS wipe lesson. Soft-PASS GitHub docs Soft-PASS done this turn; Soft-PASS Dropbox/Notion Soft-PASS continue.
+3. **Tape before copper — 53 vs pup offset + frame-width laterals**  
+   **Why:** Soft-FAIL open: offsets/spacing pending tape; inventing AWG/spacing kills the pan.  
+   **Impact:** One cassette family with defendable count/spacing; Strip owns tape, Pod consumes hop geometry.
 
+4. **Drain/slope the recessed pan (ice/water Soft-FAIL)**  
+   **Why:** Spec punch: flush pan holds water/ice → plunger never compresses.  
+   **Impact:** Avoids silent “no watts” that looks like electrical failure.
+
+5. **Dispatch by cassette ID, never door number (finish Steve coding Soft-FAIL)**  
+   **Why:** Watts follow CONDUCTING bay; one WORN/FAULT must not take 201 doors. Steve cassette-ID status UNKNOWN since Aug.  
+   **Impact:** Survivable yard; HUD matches Strip lamps.
+
+6. **Gen-1 charge money = dropped trailer on pad; hitch = manual HV + HVIL**  
+   **Why:** Charge never crosses fifth wheel first; auto-mate is Gen-2.  
+   **Impact:** Shippable charge path; Soft-FAIL Gen-2 fifth-wheel stays on the board.
+
+7. **Hybrid write-off targets P&D / shuttle / blind-haul first, not linehaul**  
+   **Why:** Published analogs win on city cycle (NREL Coca-Cola +13.7% in-service; city EST higher); highway ~0–6%. His day 180–280 mi is city case. Kit mpg Soft-FAIL (none published).  
+   **Impact:** Subsidy story matches duty cycle; Soft-FAIL kit mpg until datalog.
+
+8. **Who-pays plate stays public plant / private freight (no carrier solar invoice)**  
+   **Why:** LTL won’t eat metro PV+packs+strip; dual-use resilience is the public ask. Radios = 911 project, not this HUD.  
+   **Impact:** Pitch doesn’t ask the wrong check; Soft-FAIL named appropriation / $.
+
+9. **First-check sequence hard-gated (HUD → one believer → one Loop 820 node → film)**  
+   **Why:** Staffing OEM/legal before a walkable node is burn rate looking for a mission.  
+   **Impact:** Capital and agents stay on prove, not org chart.
+
+10. **Measure before inventing — SOC dash, V/A Soft-FAIL, fault current Soft-FAIL**  
+    **Why:** Locked: no fake SOC%; pad amps wait on shoe patch + in-tube jumper; V inherits ports (published analogs only).  
+    **Impact:** Soft-PASS stays credible; Soft-FAIL live telemetry until first article logs.
+
+11. **Pod software half = torque/slip log schema (insurance path Soft-FAIL %)**  
+    **Why:** Electric ms traction vs air 10–50 Hz is the product differentiator; insurance discount only if log trustworthy — no % invented.  
+    **Impact:** Soft-FAIL monetization path without fake filings.
+
+12. **DFW energy story = GWh/day not terawatts; node-class yards not every roof**  
+    **Why:** Soft-PASS mid roof EST ~dozens GWh/day market-scale; TW claim is unit error. Estes four-yard prototype first.  
+    **Impact:** Pitch survives engineer review; Soft-FAIL fleet GWh/day until truck VMT pulled.
+
+13. **Persistence for truck Soft-PASS (this pack)**  
+    **Why:** Implementations vanish after chat wipe.  
+    **Impact:** This folder + Dropbox/GH/Notion/skills = durable; Soft-FAIL MiniME/Win home verify tonight.
+
+14. **Soft-FAIL — city mesh ARL↔Dallas↔GRP↔Lone Star**  
+    **Why:** No signed interconnect MW.  
+    **Impact:** Keep verbs in router as parked; no Soft-PASS city ship claim.
+
+15. **Soft-FAIL — disaster recovery / 911 twin**  
+    **Why:** Same payer logic, different project folder; radios not in trucking HUD.  
+    **Impact:** Dual-use narrative without merging repos or inventing radios SKUs.
